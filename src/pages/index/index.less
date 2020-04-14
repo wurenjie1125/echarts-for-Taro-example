@@ -1,0 +1,163 @@
+.statistic-header{
+  position: relative;
+  z-index: 1;
+  height: 412px;
+  background-image: url('../../assets/header-bg.png');
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  padding: 40px;
+  .picker-time{
+    display: flex;
+    align-items: center;
+  }
+  .down-triangle{
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #fff ;
+    margin-left: 16px;
+    margin-top: 10px;
+  }
+  .select-time{
+    color: #fff;
+  }
+  .top-actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    .top-actions-date{
+      height: 40px;
+      >span,text{
+        font-size:28px;
+        font-family:PingFangSC-Regular,PingFang SC;
+        color:rgba(255,255,255,0.85);
+        line-height:40px;
+      }
+    }
+    .top-actions-btn-box{
+      display: inline-block;
+      vertical-align: middle;
+      .top-actions-btn{
+        margin-left: 48px;
+        display: inline-block;
+        height: 44px;
+        width: 90px;
+        text-align: center;
+        vertical-align: middle;
+        font-size:26px;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400;
+        line-height: 44px;
+        color:rgba(255,255,255, 0.85);
+        &.active{
+          border-radius:22px;
+          line-height: 42px;
+          border:1px solid rgba(255,255,255, 0.85);
+        }
+      }
+    }
+  }
+  .total-income{
+    margin-top: 54px;
+    .total-income-desc{
+      font-size:26px;
+      font-family:PingFangSC-Light,PingFang SC;
+      font-weight:300;
+      color:rgba(255,255,255,0.85);
+      line-height:36px;
+    }
+    .total-income-amount{
+      margin-top: 20px;
+      font-family:DINAlternate-Bold,DINAlternate;
+      font-weight:bold;
+      color:rgba(255,255,255,1);
+      font-size: 60px;
+      line-height:70px;
+      .unit{
+        margin-right: 10px;
+        font-size:40px;
+        font-weight:bold;
+      }
+    }
+  }
+}
+.statistic-chart-container{
+  position: relative;
+  z-index: 2;
+  top: -80px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 40px;
+  background-color: rgba(255,255,255,1);
+  .chart-title{
+    font-size:30px;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:500;
+    color:rgba(52,52,52,1);
+    padding-bottom:12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &.margin-top-fix{
+      margin-top: -90px;
+    }
+  }
+  .chart-wrapper{
+    position: relative;
+    top: -55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .chart-box{
+      position: relative;
+      flex: 1;
+      padding-right: 90px;
+    }
+    .legend-box{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .legend-item-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        color:rgba(94,94,94,1);
+        font-size: 22px;
+        line-height: 44px;;
+        .label{
+          width: 100px;
+          .dot{
+            display: inline-block;
+            vertical-align: middle;
+            width: 22px;
+            height: 22px;
+            border-radius: 11px;
+            margin-right: 10px;
+            &.green{
+              background-color: #4ECB72;
+            }
+            &.blue{
+              background-color: #38A0FF;
+            }
+            &.yellow{
+              background-color: #FFCA39;
+            }
+            &.purple{
+              background-color: #B68AFF;
+            }
+          }
+        }
+        .value{
+          padding-left: 40px;
+        }
+      }
+    }
+  }
+}
+
+
+
