@@ -17,28 +17,23 @@ const commonFunc = (_this, chart) => {
 }
 
 const initChart = ((type) => {
-  switch (type) {
-    case 'h5':
-      return (_this) => {
-        let chart = echarts.init(_this.chartRef.vnode.dom)
-        commonFunc(_this, chart)
-      }
-    case 'weapp':
-      return (_this) => {
-        console.log("_thischartRef",_this.chartRef.init);
-        _this.chartRef.init((canvas, width, height) => {
-          const chart = echarts.init(canvas, null, {
-            width: width,
-            height: height
-          })
-          console.log('chart',chart)
-          canvas.setChart(chart)
-          commonFunc(_this, chart)
-          return chart
-        })
-      }
+  console.log('type',type)
+    
+  return (_this) => {
+    console.log("_thischartRef",_this.chartRef.init);
+    _this.chartRef.init((canvas, width, height) => {
+      const chart = echarts.init(canvas, null, {
+        width: width,
+        height: height
+      })
+      console.log('chart',chart)
+      canvas.setChart(chart)
+      commonFunc(_this, chart)
+      return chart
+    })
   }
-})(process.env.TARO_ENV)
+  
+})()
 
 export default class Chart extends Taro.Component {
 
