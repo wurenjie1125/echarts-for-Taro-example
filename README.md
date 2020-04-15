@@ -6,3 +6,6 @@
 主要二次封装了[Echarts-微信小程序版本](https://github.com/ecomfe/echarts-for-weixin "Echarts-微信小程序版本")这个库，以React形式重写。
 
 参考了[Taro-echarts](https://github.com/eyelly-wu/taro-echarts "Taro-echarts")这个仓库。但是这个仓库有一些弊端，打包出来太大，超出了微信包大小的限制。而且处理不好多个图表同时显示的情况。
+
+###截图：
+![截图](https://github.com/wurenjie1125/echarts-for-Taro-example/blob/master/echarts.png "截图")
